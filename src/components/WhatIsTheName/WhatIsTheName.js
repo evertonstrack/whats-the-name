@@ -12,11 +12,28 @@ const suggestedNames = [
     'Waldomiro',
     'Walgi',
     'Walter',
-    'Wilmar',
-    'Wilson',
+    'Walmor',
+    'Walson',
     'Waldisnei',
     'Walisson',
-    'Walton'
+    'Walton',
+    'Walssomar',
+    'Waldinei',
+    'Walgismar',
+    'Wander',
+    'Wagner',
+    'Wanderson',
+    'Washington',
+    'Wanderley',
+    'Wandaley',
+    'Wady',
+    'Walton',
+    'Waldrich',
+    'Walger',
+    'Waltrode',
+    'Walison',
+    'Wallis',
+    'Wayne'
 ];
 
 export class WhatIsTheName extends Component {
