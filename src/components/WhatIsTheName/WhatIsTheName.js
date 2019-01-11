@@ -32,11 +32,15 @@ export class WhatIsTheName extends Component {
     return fetch(`https://servicodados.ibge.gov.br/api/v1/censos/nomes/basica?nome=${suggested}`)
       .then(res => res.json())
       .then(data => {
-          // Variations in PascalCase
-          const otherNames = data[0].nomes.split(',')
-              .map(name => name.replace(/\w+/g, w => w[0].toUpperCase() + w.slice(1).toLowerCase()));
-          SUGGESTED_NAMES.push(...otherNames);
-          return SUGGESTED_NAMES[Math.floor(Math.random() * SUGGESTED_NAMES.length)];
+          if (data && data[0] && data[0].nomes && data[0].nomes !== '') {
+              // Variations in PascalCase
+              const otherNames = data[0].nomes.split(',')
+                  .filter(name => name.startsWith('WA'))
+                  .map(name => name.replace(/\w+/g, w => w[0].toUpperCase() + w.slice(1).toLowerCase()));
+              SUGGESTED_NAMES.push(...otherNames);
+              return SUGGESTED_NAMES[Math.floor(Math.random() * SUGGESTED_NAMES.length)];
+          }
+          return suggested;
       });
   }
 
