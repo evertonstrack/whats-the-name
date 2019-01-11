@@ -7,3 +7,18 @@ header{
     font-size: 40px;
   }
 }
+
+
+
+
+
+
+@media (max-width: 640px) {
+
+  header {
+    h1 {
+      margin: 5vh 0;
+      font-size: 28px;
+    }
+  }
+}

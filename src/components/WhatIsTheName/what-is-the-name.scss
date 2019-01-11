@@ -19,3 +19,15 @@ section{
     font-weight: bold;
   }
 }
+
+
+@media (max-width: 640px) {
+
+
+  section{
+    h2{
+      width: 80vw;
+      height: 80vw;
+    }
+  }
+}
